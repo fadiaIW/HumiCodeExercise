@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         marginHorizontal: 8,
         borderRadius: 20,
-        // backgroundColor: cardType === 'Spell' ? '#4AB5A6' : cardType === 'Trap' ? '#BC5C8F' : cardType === 'Monster' ? '#C1855E' : '#fff',
         flexDirection: 'row',
         flex: 1,
         justifyContent: 'center'
@@ -23,6 +22,21 @@ const styles = StyleSheet.create({
         fontSize: 12, 
         color: COLORS.white, 
         fontWeight:'500'
+    },
+    infoStyle:{
+        fontSize: 10, 
+        textAlign: 'right',
+        color: COLORS.white,
+        fontWeight:'500'
+    },
+    descriptionBox:{
+        marginTop: 40,
+        marginHorizontal: 15,
+        padding:20,
+        borderRadius: 20,
+        justifyContent: 'center',
+        backgroundColor:'rgba(255,255,255,0.7)'
+
     }
 
 })
