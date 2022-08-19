@@ -35,7 +35,7 @@ npx react-native run-android
     
 ## Test Cases 
 
-These are the following test cases I would consider : 
+For testing, I would use Jest testing library, and below are some of the test cases I would consider : 
    
     1. Check if the APIs are being called successfully
     
