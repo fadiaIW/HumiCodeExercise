@@ -35,11 +35,11 @@ npx react-native run-android
     
 ## Test Cases 
 
-These are the following test cases I would consider if I were to write them: 
+These are the following test cases I would consider : 
    
     1. Check if the APIs are being called successfully
     
-    2. Check If List View component is rendering as it is ecpected to. 
+    2. Check If List View component is rendering as it is expected to. 
     
     3. Check if search component is working as it is expected to.
  
