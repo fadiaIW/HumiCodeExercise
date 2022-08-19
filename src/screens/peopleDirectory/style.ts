@@ -12,31 +12,41 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center'
     },
-    titleStyle:{
-        fontSize: 15, 
-        paddingRight: 6 , 
-        fontWeight:'bold',
+    titleStyle: {
+        fontSize: 15,
+        paddingRight: 6,
+        fontWeight: 'bold',
         color: COLORS.white
     },
-    typeStyle:{
-        fontSize: 12, 
-        color: COLORS.white, 
-        fontWeight:'500'
+    typeStyle: {
+        fontSize: 12,
+        color: COLORS.white,
+        fontWeight: '500'
     },
-    infoStyle:{
-        fontSize: 10, 
+    infoStyle: {
+        fontSize: 10,
         textAlign: 'right',
         color: COLORS.white,
-        fontWeight:'500'
+        fontWeight: '500'
     },
-    descriptionBox:{
+    descriptionBox: {
         marginTop: 40,
         marginHorizontal: 15,
-        padding:20,
+        padding: 20,
         borderRadius: 20,
         justifyContent: 'center',
-        backgroundColor:'rgba(255,255,255,0.7)'
+        backgroundColor: 'rgba(255,255,255,0.7)'
 
+    },
+    searchButton: {
+        justifyContent: 'center',
+        flex: 1,
+        height: 40,
+        width: 50,
+        backgroundColor: COLORS.pink,
+        marginVertical: 20,
+        marginRight: 10,
+        borderRadius: 5
     }
 
 })

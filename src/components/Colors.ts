@@ -5,5 +5,6 @@ export const COLORS = {
     monsterColor:'#C1855E',
     spellColor:'#4AB5A6',
     trapColor:'#BC5C8F',
-    white:'#ffffff'
+    white:'#ffffff',
+    pink:'#c82f50'
   }

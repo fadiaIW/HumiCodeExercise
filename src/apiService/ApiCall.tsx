@@ -8,7 +8,6 @@ export const getAPI = async endpoint =>{
         .then(async response=>await response.json())
         .then(async json =>{
             let data = await json;
-            // console.log(data.data);
             return data;
         })
 

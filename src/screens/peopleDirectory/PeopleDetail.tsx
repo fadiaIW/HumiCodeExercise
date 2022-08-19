@@ -4,13 +4,14 @@ import { COLORS } from '../../components/Colors';
 import styles from './style';
 import { handleColor } from '../../utils/Helper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+Ionicons.loadFont();
 MaterialCommunityIcons.loadFont();
-export default function PeopleDetail({ route }: any) {
+
+export default function PeopleDetail({ navigation,route }: any) {
 
     const { item, cardType } = route.params;
     const cardSet: [] = item?.card_sets;
-    console.log({cardSet});
-    
 
     function CardSet() {
         return (
@@ -19,9 +20,9 @@ export default function PeopleDetail({ route }: any) {
                     cardSet?.map((item, i) => {
                         return (
                             <Fragment key={i}>
-                                <View style = {{marginVertical:3, flexDirection:'row'}}>
-                                    <MaterialCommunityIcons name = "newspaper-variant-outline" size={20} color={COLORS.headerText} />
-                                    <Text style={{ fontSize: 14, fontWeight: '400', marginLeft:10 }} >{item.set_name}</Text>
+                                <View style={{ marginVertical: 3, flexDirection: 'row' }}>
+                                    <MaterialCommunityIcons name="newspaper-variant-outline" size={20} color={COLORS.headerText} />
+                                    <Text style={{ fontSize: 14, fontWeight: '400', marginLeft: 10 }} >{item.set_name}</Text>
                                 </View>
                             </Fragment>
 
@@ -35,8 +36,9 @@ export default function PeopleDetail({ route }: any) {
     return (
         <View style={{ flex: 1, paddingTop: 40, backgroundColor: '#fff' }}>
             <View style={{ justifyContent: 'center' }}>
-                <View style={{ alignItems: 'center', paddingVertical: 20 }} >
-                    <Text style={[styles.titleStyle, { color: handleColor(cardType), fontSize: 20 }]}>{item?.name}</Text>
+                <View style={{ paddingVertical: 20, flexDirection: 'row', alignItems:'center' }} >
+                    <Ionicons name="md-chevron-back" size={40} onPress={()=>{navigation.goBack()}}/>
+                    <Text style={[styles.titleStyle, { color: handleColor(cardType), fontSize: 20,flex:1, textAlign:'center'  }]}>{item?.name}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: "center", marginBottom: 20, marginHorizontal: 10 }} >
                     {cardType === 'Monster' &&
@@ -54,7 +56,7 @@ export default function PeopleDetail({ route }: any) {
                     }
                 </View>
             </View>
-            <ScrollView style={{ flex: 1, borderRadius: 40, backgroundColor: handleColor(cardType), paddingBottom:40}}>
+            <ScrollView style={{ flex: 1, borderRadius: 40, backgroundColor: handleColor(cardType), paddingBottom: 40 }}>
                 <View style={styles.descriptionBox}>
                     <Text style={{ fontWeight: "bold", fontSize: 14, marginBottom: 10 }}>Description</Text>
                     <Text>{item.desc}</Text>

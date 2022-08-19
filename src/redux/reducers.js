@@ -1,7 +1,8 @@
-import { GET_PEOPLE } from "./actions";
+import { GET_PEOPLE, SEARCH_PEOPLE, ERROR } from "./actions";
 
 const initialState = {
-    people: []
+    people: [],
+    error: null
   };
 
 
@@ -9,7 +10,11 @@ const initialState = {
     switch (action.type) {
       case GET_PEOPLE:
        return {...state, people:action.payload}
-      
+      case SEARCH_PEOPLE:
+        return {...state, people:action.payload }
+      case ERROR:
+        console.log("in error");
+        return { ...state, error:action.error}
       default:
         return state;
     }
